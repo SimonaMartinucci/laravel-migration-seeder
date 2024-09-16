@@ -20,7 +20,8 @@ class PageController extends Controller
     }
 
     public function trains() {
-        $trains = Train::where('departure_date', '>=', '2024-09-12')->get();
+        // $trains = Train::where('departure_date', '>=', '2024-09-12')->get();
+        $trains = Train::all();
 
         return view('trains', compact('trains'));
     }
